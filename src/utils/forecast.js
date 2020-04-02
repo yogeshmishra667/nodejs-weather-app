@@ -11,8 +11,10 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.daily.data[0].summary} it's currently ${body.currently.temperature} degree out there is the ${body.currently.precipProbability}% chance of rain`
+        `${body.daily.data[0].summary} it's currently ${body.currently.temperature} degree out there is the ${body.currently.precipProbability}% chance of rain  the highest temperature is ${body.daily.data[0].temperatureHigh} and lowest temperature is
+        ${body.daily.data[0].temperatureLow} and wind speed is ${body.daily.data[0].windSpeed} and ozone layer level is ${body.daily.data[0].ozone}`
       );
+      
       // const body = response.body.currently;
       // console.log(
       //   `it's currently ${body.temperature} degree out there is the ${body.precipProbability}% chance of rain`
